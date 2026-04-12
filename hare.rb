@@ -5,23 +5,23 @@
 class Hare < Formula
   desc "hare cli"
   homepage "https://github.com/carrots-sh/hare"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "docker" => :required
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carrots-sh/hare/releases/download/v0.1.0/hare_0.1.0_darwin_amd64.tar.gz"
-      sha256 "c3bc62b42a3a9491b74efd80673a2606f5f6edc8a5bc3ed1d88ae13e0234720a"
+      url "https://github.com/carrots-sh/hare/releases/download/v0.1.1/hare_0.1.1_darwin_amd64.tar.gz"
+      sha256 "52f4269325a0be286b6d90359fc005a5cb2a11884583dc3d2328370292b64d68"
 
       define_method(:install) do
         bin.install "hare"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carrots-sh/hare/releases/download/v0.1.0/hare_0.1.0_darwin_arm64.tar.gz"
-      sha256 "862b27d076e19a0afacfeba115c77a4032cd7034d5ae9d2122ebb06fbab22269"
+      url "https://github.com/carrots-sh/hare/releases/download/v0.1.1/hare_0.1.1_darwin_arm64.tar.gz"
+      sha256 "9d500c5c5faa7b4c89fb03c0667d3f43671d53f716a8d548d5c96ebd8b977828"
 
       define_method(:install) do
         bin.install "hare"
@@ -31,15 +31,15 @@ class Hare < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carrots-sh/hare/releases/download/v0.1.0/hare_0.1.0_linux_amd64.tar.gz"
-      sha256 "4d303728d796e1a36d316ec30599830763af4106356c15d6ffe7d8155cbef5c7"
+      url "https://github.com/carrots-sh/hare/releases/download/v0.1.1/hare_0.1.1_linux_amd64.tar.gz"
+      sha256 "01220c04b6371bef86a8807d83df1b43e7476fe8858cf862170fc0ca00d9977f"
       define_method(:install) do
         bin.install "hare"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carrots-sh/hare/releases/download/v0.1.0/hare_0.1.0_linux_arm64.tar.gz"
-      sha256 "9fd58445c31a1300bae9d7b7876e71f11ad1dcb6683c5bc21c562c403ce7361f"
+      url "https://github.com/carrots-sh/hare/releases/download/v0.1.1/hare_0.1.1_linux_arm64.tar.gz"
+      sha256 "a7f45efa20e6f4261c8dc240ed6deecfe214741c63ac77fda370cecbc73ebc4a"
       define_method(:install) do
         bin.install "hare"
       end
