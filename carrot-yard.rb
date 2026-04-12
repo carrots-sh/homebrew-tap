@@ -5,23 +5,23 @@
 class CarrotYard < Formula
   desc "carrot-yard cli"
   homepage "https://github.com/carrots-sh/carrot-yard"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   depends_on "docker" => :required
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carrots-sh/carrot-yard/releases/download/v0.3.0/carrot-yard_0.3.0_darwin_amd64.tar.gz"
-      sha256 "8f1fbb5a6b372a886c0171a7108c15bddb698ea8886d1a9264e45b27b991599b"
+      url "https://github.com/carrots-sh/carrot-yard/releases/download/v0.3.1/carrot-yard_0.3.1_darwin_amd64.tar.gz"
+      sha256 "48c154b6e1e148a12f5c1b73c127c509c45d6dd34a5ba7740edef2f1ce1982d3"
 
       define_method(:install) do
         bin.install "carrot-yard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carrots-sh/carrot-yard/releases/download/v0.3.0/carrot-yard_0.3.0_darwin_arm64.tar.gz"
-      sha256 "76f688bc31fa1152c9c78c164a730f528cafd32a43f5cec0c833c15c1a7ac46d"
+      url "https://github.com/carrots-sh/carrot-yard/releases/download/v0.3.1/carrot-yard_0.3.1_darwin_arm64.tar.gz"
+      sha256 "44387378b9307bd0d970b465682c088eb7402ef08c2a5a0079ff44119ead6cb6"
 
       define_method(:install) do
         bin.install "carrot-yard"
@@ -31,15 +31,15 @@ class CarrotYard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carrots-sh/carrot-yard/releases/download/v0.3.0/carrot-yard_0.3.0_linux_amd64.tar.gz"
-      sha256 "2522282b1b81a83f60cacb86d83261d91a2bd619f74f581f76b338930ae01deb"
+      url "https://github.com/carrots-sh/carrot-yard/releases/download/v0.3.1/carrot-yard_0.3.1_linux_amd64.tar.gz"
+      sha256 "c45e581fdb42a982e390ed0a3bbb4aeb2064cd1b01baa94dc556b56aed0bdfd4"
       define_method(:install) do
         bin.install "carrot-yard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carrots-sh/carrot-yard/releases/download/v0.3.0/carrot-yard_0.3.0_linux_arm64.tar.gz"
-      sha256 "b6c909eff740e11f9ba220a407b1f6a5e22f6ef0ffcd7099cda1c1067cec86b5"
+      url "https://github.com/carrots-sh/carrot-yard/releases/download/v0.3.1/carrot-yard_0.3.1_linux_arm64.tar.gz"
+      sha256 "26d5bf17e25b09d4defb5c214f086cdc5d0fb7aa17bb371c14a863a803ce896b"
       define_method(:install) do
         bin.install "carrot-yard"
       end
