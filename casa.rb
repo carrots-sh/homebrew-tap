@@ -14,7 +14,7 @@ class Casa < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/carrots-sh/casa/releases/download/v0.8.2/casa_0.8.2_darwin_amd64.tar.gz"
-      sha256 "49effd403c194a072d5a67c843ee617ea66bb6c3664820b02d09fb9b43545044"
+      sha256 "0e4e871efef5aacb3c4c94abcbe5d1e7dd0226a8d935a001ab125341cb7e6dbd"
 
       define_method(:install) do
         bin.install "casa"
@@ -22,7 +22,7 @@ class Casa < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/carrots-sh/casa/releases/download/v0.8.2/casa_0.8.2_darwin_arm64.tar.gz"
-      sha256 "b42c87d64ab58ad11d663962c5e40646f51108c58159b5018d5e7a7ffa67ce68"
+      sha256 "b960465fc295ef179c33f9c6963d7134c6a8814ac3e8579cc7543dad36ca2426"
 
       define_method(:install) do
         bin.install "casa"
@@ -33,14 +33,14 @@ class Casa < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/carrots-sh/casa/releases/download/v0.8.2/casa_0.8.2_linux_amd64.tar.gz"
-      sha256 "2b505f9790546da4289c26c43a25434f7fbc3902a287549f7adc53234bbc50b7"
+      sha256 "4d95c168416327f9740aa1487bf75cca77dd7ef3ff83e802a3bbbb8b69a75628"
       define_method(:install) do
         bin.install "casa"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/carrots-sh/casa/releases/download/v0.8.2/casa_0.8.2_linux_arm64.tar.gz"
-      sha256 "976cd9d307ec45462c3450959f5724eab35d60993a258ef4de1f79c9f8ee58a3"
+      sha256 "b0768dce37f0fd7ecf428c9a268261bec382d71c0406f8ef285f286e7101bb35"
       define_method(:install) do
         bin.install "casa"
       end
