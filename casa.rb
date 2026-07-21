@@ -5,7 +5,7 @@
 class Casa < Formula
   desc "Interactive package manager front-end that keeps your Brewfile in sync."
   homepage "https://github.com/carrots-sh/casa"
-  version "0.5.2"
+  version "0.5.3"
   license "MIT"
 
   depends_on "chezmoi"
@@ -13,16 +13,16 @@ class Casa < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carrots-sh/casa/releases/download/v0.5.2/casa_0.5.2_darwin_amd64.tar.gz"
-      sha256 "3ada4b3034c419a89d204f5c51ed77dfe32a2e13c6e2fc50ecd44e69db184cbb"
+      url "https://github.com/carrots-sh/casa/releases/download/v0.5.3/casa_0.5.3_darwin_amd64.tar.gz"
+      sha256 "12d3765df683505fad257a9f83541441514c27764c992263b50a83a5e7a9ebef"
 
       define_method(:install) do
         bin.install "casa"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carrots-sh/casa/releases/download/v0.5.2/casa_0.5.2_darwin_arm64.tar.gz"
-      sha256 "1065899b5e157b164ddbe21d9881c0b97de411c1d1248cf61f9d380b5e4d22c0"
+      url "https://github.com/carrots-sh/casa/releases/download/v0.5.3/casa_0.5.3_darwin_arm64.tar.gz"
+      sha256 "3a7761bb3b4cece3c4623e8de461da47026e87fe70dc04c1cbf9a7930a3b84ed"
 
       define_method(:install) do
         bin.install "casa"
@@ -32,15 +32,15 @@ class Casa < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carrots-sh/casa/releases/download/v0.5.2/casa_0.5.2_linux_amd64.tar.gz"
-      sha256 "56cf8e6235e17b92efd5fcd13196980ee734a3ac00e6a1992d4123bfef32b8fa"
+      url "https://github.com/carrots-sh/casa/releases/download/v0.5.3/casa_0.5.3_linux_amd64.tar.gz"
+      sha256 "fdb21738b30f8753b4d3458ad4c4d19915cfe71344f2628354f97db0eaf8598a"
       define_method(:install) do
         bin.install "casa"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carrots-sh/casa/releases/download/v0.5.2/casa_0.5.2_linux_arm64.tar.gz"
-      sha256 "188424989acfffbbea38ab01200f0237d00d4183b69818879f0f23708e58d306"
+      url "https://github.com/carrots-sh/casa/releases/download/v0.5.3/casa_0.5.3_linux_arm64.tar.gz"
+      sha256 "6b4a8042403768c81cd84eff3650c62115f6bd9207703e086c28c46c766d6634"
       define_method(:install) do
         bin.install "casa"
       end
